@@ -111,7 +111,7 @@ class Config
             }
 
             $configs[] = $this->_getConfig(
-                $filename
+                $location . DIRECTORY_SEPARATOR . $filename
             );
         }
 
