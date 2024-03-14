@@ -1,0 +1,17 @@
+{
+    "name": "openlegends/asset",
+    "description": "Game Assets for OpenLegends",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "OpenLegends\\Asset\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OpenLegends"
+        }
+    ],
+    "require": {}
+}
