@@ -15,7 +15,7 @@ class Config
 
         else
         {
-            throw new Exception();
+            throw new \Exception();
         }
     }
 
@@ -100,7 +100,7 @@ class Config
 
         if (!is_dir($location) || !is_readable($location))
         {
-            throw new Exception();
+            throw new \Exception();
         }
 
         foreach (scandir($location) as $filename)
@@ -124,17 +124,17 @@ class Config
     {
         if (!is_file($location) || !is_readable($location))
         {
-            throw new Exception();
+            throw new \Exception();
         }
 
         if (!$json = file_get_contents($location))
         {
-            throw new Exception();
+            throw new \Exception();
         }
 
         if (!$config = json_decode($json))
         {
-            throw new Exception();
+            throw new \Exception();
         }
 
         return $config;
