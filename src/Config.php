@@ -37,56 +37,54 @@ class Config
         foreach (
             $this->_getConfigs(
                 __DIR__ . DIRECTORY_SEPARATOR . $this->_asset . DIRECTORY_SEPARATOR . $folder
-            ) as $config)
+            ) as $card)
         {
-            if ($type && !in_array($config->type, $type))
+            if ($type && !in_array($card->type, $type))
             {
                 continue;
             }
 
-            if ($attributes && !in_array($config->attributes, $attributes))
+            if ($attributes && !in_array($card->attributes, $attributes))
             {
                 continue;
             }
 
-            if ($title && !in_array($config->title, $title))
+            if ($title && !in_array($card->title, $title))
             {
                 continue;
             }
 
-            if ($description && !in_array($config->description, $description))
+            if ($description && !in_array($card->description, $description))
             {
                 continue;
             }
 
-            if ($cost && !in_array($config->cost, $cost))
+            if ($cost && !in_array($card->cost, $cost))
             {
                 continue;
             }
 
-            if ($attack && !in_array($config->attack, $attack))
+            if ($attack && !in_array($card->attack, $attack))
             {
                 continue;
             }
 
-            if ($health && !in_array($config->health, $health))
+            if ($health && !in_array($card->health, $health))
             {
                 continue;
             }
 
-            if ($craft && !in_array($config->craft, $craft))
+            if ($craft && !in_array($card->craft, $craft))
             {
                 continue;
             }
 
-            if ($extract && !in_array($config->extract, $extract))
+            if ($extract && !in_array($card->extract, $extract))
             {
                 continue;
             }
 
-            $cards[] = json_decode(
-                $config
-            );
+            $cards[] = $card;
         }
 
         return $cards;
