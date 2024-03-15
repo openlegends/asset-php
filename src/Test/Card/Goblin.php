@@ -43,6 +43,14 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
         $this->setExtract(
             3
         );
+
+        $this->setGuard(
+            true
+        );
+
+        $this->setSilent(
+            false
+        );
     }
 
     public function act(

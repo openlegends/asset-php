@@ -43,6 +43,14 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
         $this->setExtract(
             1
         );
+
+        $this->setGuard(
+            false
+        );
+
+        $this->setSilent(
+            false
+        );
     }
 
     public function act(
