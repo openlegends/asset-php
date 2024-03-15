@@ -54,7 +54,7 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
     }
 
     public function act(
-        \OpenLegends\Engine\Abstract\Card $target
+        \OpenLegends\Engine\Abstract\Action\Card $action
     ) {
         $this->attack(
             $target
