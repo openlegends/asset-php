@@ -9,11 +9,11 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
     public function __construct()
     {
         $this->addAttribute(
-            _('Neutral')
+            new \OpenLegends\Asset\Test\Attribute\Neutral()
         );
 
         $this->setType(
-            _('Animal')
+            new \OpenLegends\Asset\Test\Type\Animal()
         );
 
         $this->setTitle(

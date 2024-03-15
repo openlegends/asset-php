@@ -9,11 +9,11 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
     public function __construct()
     {
         $this->addAttribute(
-            _('Neutral')
+            new \OpenLegends\Asset\Test\Attribute\Neutral()
         );
 
         $this->setType(
-            _('Unknown')
+            new \OpenLegends\Asset\Test\Type\Goblin()
         );
 
         $this->setTitle(
