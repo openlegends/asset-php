@@ -55,5 +55,9 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 
     public function act(
         \OpenLegends\Engine\Abstract\Card $target
-    ) {}
+    ) {
+        $this->attack(
+            $target
+        );
+    }
 }
