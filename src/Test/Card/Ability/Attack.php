@@ -43,4 +43,7 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Ability
 
         // @TODO remove abilities
     }
+
+    public function apply()
+    {}
 }

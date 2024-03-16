@@ -14,4 +14,12 @@ class Multiple extends \OpenLegends\Engine\Abstract\Card\Ability
     {
         $this->_abilities[] = $ability;
     }
+
+    public function apply(): void
+    {
+        foreach ($this->_abilities as $ability)
+        {
+            $ability->apply();
+        }
+    }
 }
