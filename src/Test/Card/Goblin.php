@@ -8,14 +8,14 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
-        $ability = new \OpenLegends\Asset\Test\Ability\Multiple();
+        $ability = new \OpenLegends\Asset\Test\Card\Ability\Multiple();
 
         $ability->add(
-            new \OpenLegends\Asset\Test\Ability\Lethal()
+            new \OpenLegends\Asset\Test\Card\Ability\Lethal()
         );
 
         $ability->add(
-            new \OpenLegends\Asset\Test\Ability\Guard()
+            new \OpenLegends\Asset\Test\Card\Ability\Guard()
         );
 
         $this->setAbility(
@@ -23,15 +23,15 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
         );
 
         $this->setAttribute(
-            new \OpenLegends\Asset\Test\Attribute\Neutral()
+            new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
         );
 
         $this->setType(
-            new \OpenLegends\Asset\Test\Type\Goblin()
+            new \OpenLegends\Asset\Test\Card\Type\Goblin()
         );
 
         $this->setRarity(
-            new \OpenLegends\Asset\Test\Rarity\Common()
+            new \OpenLegends\Asset\Test\Card\Rarity\Common()
         );
 
         $this->setTitle(

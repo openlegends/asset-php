@@ -9,15 +9,15 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
     public function __construct()
     {
         $this->setAttribute(
-            new \OpenLegends\Asset\Test\Attribute\Neutral()
+            new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
         );
 
         $this->setType(
-            new \OpenLegends\Asset\Test\Type\Animal()
+            new \OpenLegends\Asset\Test\Card\Type\Animal()
         );
 
         $this->setRarity(
-            new \OpenLegends\Asset\Test\Rarity\Common()
+            new \OpenLegends\Asset\Test\Card\Rarity\Common()
         );
 
         $this->setTitle(
