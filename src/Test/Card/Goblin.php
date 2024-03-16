@@ -16,6 +16,10 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
             new \OpenLegends\Asset\Test\Type\Goblin()
         );
 
+        $this->setRarity(
+            new \OpenLegends\Asset\Test\Rarity\Common()
+        );
+
         $this->setTitle(
             _('Goblin')
         );
