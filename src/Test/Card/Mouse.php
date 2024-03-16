@@ -48,10 +48,6 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
             1
         );
 
-        $this->setGuard(
-            false
-        );
-
         $this->setSilent(
             false
         );

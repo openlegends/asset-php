@@ -48,10 +48,6 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
             2
         );
 
-        $this->setGuard(
-            false
-        );
-
         $this->setSilent(
             false
         );
