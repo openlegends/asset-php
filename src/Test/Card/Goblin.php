@@ -62,12 +62,4 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
             3
         );
     }
-
-    public function act(
-        \OpenLegends\Engine\Abstract\Card $target
-    ) {
-        $this->attack(
-            $target
-        );
-    }
 }

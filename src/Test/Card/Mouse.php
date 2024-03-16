@@ -48,12 +48,4 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
             1
         );
     }
-
-    public function act(
-        \OpenLegends\Engine\Abstract\Card $target
-    ) {
-        $this->attack(
-            $target
-        );
-    }
 }

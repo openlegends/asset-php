@@ -48,12 +48,4 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
             2
         );
     }
-
-    public function act(
-        \OpenLegends\Engine\Abstract\Card $target
-    ) {
-        $this->attack(
-            $target
-        );
-    }
 }
