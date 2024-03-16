@@ -18,6 +18,10 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
             new \OpenLegends\Asset\Test\Card\Ability\Guard()
         );
 
+        $ability->add(
+            new \OpenLegends\Asset\Test\Card\Ability\Attack()
+        );
+
         $this->setAbility(
             $ability
         );

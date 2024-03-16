@@ -20,6 +20,10 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
             new \OpenLegends\Asset\Test\Card\Rarity\Common()
         );
 
+        $this->setAbility(
+            new \OpenLegends\Asset\Test\Card\Ability\Attack()
+        );
+
         $this->setTitle(
             _('Rat')
         );
