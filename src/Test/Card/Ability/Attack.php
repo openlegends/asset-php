@@ -6,16 +6,17 @@ namespace OpenLegends\Asset\Test\Card\Ability;
 
 class Attack extends \OpenLegends\Engine\Abstract\Card\Ability
 {
-    public function player()
+    public function player(): void
     {}
 
-    public function opponent()
+    public function opponent(): void
     {}
 
     public function card(
         \OpenLegends\Engine\Abstract\Card $source,
         \OpenLegends\Engine\Abstract\Card $target
-    ) {
+    ): void
+    {
         $target->setHealth(
             $target->getHealth() - $source->getPower()
         );
@@ -28,7 +29,8 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Ability
     public function silentize(
         \OpenLegends\Engine\Abstract\Card $target,
         \OpenLegends\Engine\Abstract\Card $origin
-    ) {
+    ): void
+    {
         $target->setCost(
             $origin->getCost()
         );
@@ -44,6 +46,6 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Ability
         // @TODO remove abilities
     }
 
-    public function apply()
+    public function apply(): void
     {}
 }
