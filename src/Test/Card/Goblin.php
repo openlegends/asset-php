@@ -8,6 +8,10 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
+        $this->addAbility(
+            new \OpenLegends\Asset\Test\Ability\Lethal()
+        );
+
         $this->addAttribute(
             new \OpenLegends\Asset\Test\Attribute\Neutral()
         );
