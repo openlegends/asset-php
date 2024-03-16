@@ -8,7 +8,7 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
-        $this->addAbility(
+        $this->setAbility(
             new \OpenLegends\Asset\Test\Ability\Lethal()
         );
 
@@ -16,7 +16,7 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
             new \OpenLegends\Asset\Test\Ability\Guard()
         );
 
-        $this->addAttribute(
+        $this->setAttribute(
             new \OpenLegends\Asset\Test\Attribute\Neutral()
         );
 

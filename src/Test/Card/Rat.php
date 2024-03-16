@@ -8,7 +8,7 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
-        $this->addAttribute(
+        $this->setAttribute(
             new \OpenLegends\Asset\Test\Attribute\Neutral()
         );
 
