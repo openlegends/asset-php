@@ -47,10 +47,6 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
         $this->setExtract(
             2
         );
-
-        $this->setSilent(
-            false
-        );
     }
 
     public function act(
