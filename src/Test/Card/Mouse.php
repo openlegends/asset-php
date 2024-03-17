@@ -21,7 +21,7 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
         );
 
         $this->setAbility(
-            new \OpenLegends\Asset\Test\Card\Ability\Attack()
+            new \OpenLegends\Asset\Test\Card\Ability\Damage()
         );
 
         $this->setTitle(

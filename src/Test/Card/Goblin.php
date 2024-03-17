@@ -19,7 +19,7 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
         );
 
         $ability->add(
-            new \OpenLegends\Asset\Test\Card\Ability\Attack()
+            new \OpenLegends\Asset\Test\Card\Ability\Damage()
         );
 
         $this->setAbility(
