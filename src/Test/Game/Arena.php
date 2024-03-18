@@ -6,38 +6,47 @@ namespace OpenLegends\Asset\Test\Game;
 
 class Arena extends \OpenLegends\Engine\Abstract\Game
 {
-    public function __construct(
-        \OpenLegends\Engine\Abstract\Player $player,
+    public function __construct()
+    {
+        $deck = new \OpenLegends\Asset\Test\Pool\Card();
 
-        \OpenLegends\Engine\Abstract\Pool\Card $deck,
-        \OpenLegends\Engine\Abstract\Pool\Card $hand,
-        \OpenLegends\Engine\Abstract\Pool\Card $pile,
+        for ($i = 0; $i < 3; $i++) // generate 3 copies of each card
+        {
+            $deck->add(
+                new \OpenLegends\Asset\Test\Card\Goblin()
+            );
 
-        \OpenLegends\Engine\Abstract\Pool\Card $left,
-        \OpenLegends\Engine\Abstract\Pool\Card $right
-    ) {
-        $this->setPlayer(
-            $player
-        );
+            $deck->add(
+                new \OpenLegends\Asset\Test\Card\Mouse()
+            );
+
+            $deck->add(
+                new \OpenLegends\Asset\Test\Card\Rat()
+            );
+        }
 
         $this->setDeck(
             $deck
         );
 
         $this->setHand(
-            $hand
+            new \OpenLegends\Asset\Test\Pool\Card()
         );
 
         $this->setPile(
-            $pile
+            new \OpenLegends\Asset\Test\Pool\Card()
         );
 
         $this->setLeft(
-            $left
+            new \OpenLegends\Asset\Test\Pool\Card()
         );
 
         $this->setRight(
-            $right
+            new \OpenLegends\Asset\Test\Pool\Card()
+        );
+
+        $this->setPlayer(
+            new \OpenLegends\Asset\Test\Player\Elf()
         );
     }
 }
