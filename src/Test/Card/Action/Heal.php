@@ -8,6 +8,8 @@ class Heal extends \OpenLegends\Engine\Abstract\Card\Action
 {
     private \OpenLegends\Engine\Abstract\Card $_card;
 
+    private int $_power = 0;
+
     public function __construct(
         \OpenLegends\Engine\Abstract\Card $card
     ) {
@@ -15,22 +17,30 @@ class Heal extends \OpenLegends\Engine\Abstract\Card\Action
     }
 
     public function card(
-        \OpenLegends\Engine\Abstract\Card &$card,
-        ?int $power = null
+        \OpenLegends\Engine\Abstract\Card &$card
     ): void
     {
         $card->setHealth(
-            $card->getHealth() + ($power ? $power : $this->_card->getPower())
+            $card->getHealth() + ($this->getPower() ? $this->getPower() : $this->_card->getPower())
         );
     }
 
     public function player(
-        \OpenLegends\Engine\Abstract\Player &$player,
-        ?int $power = null
+        \OpenLegends\Engine\Abstract\Player &$player
     ): void
     {
         $player->setHealth(
-            $player->getHealth() + ($power ? $power : $this->_card->getPower())
+            $player->getHealth() + ($this->getPower() ? $this->getPower() : $this->_card->getPower())
         );
+    }
+
+    public function getPower(): int
+    {
+        return $this->_power;
+    }
+
+    public function setPower(int $value): void
+    {
+        $this->_power = $value;
     }
 }

@@ -8,6 +8,8 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Action
 {
     private \OpenLegends\Engine\Abstract\Card $_card;
 
+    private int $_power = 0;
+
     private int $_breakthrough = 0;
 
     public function __construct(
@@ -18,10 +20,9 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Action
 
     public function card(
         \OpenLegends\Engine\Abstract\Card &$card,
-        ?int $power = null
     ): void
     {
-        $damage = $power ? $power : $this->_card->getPower();
+        $damage = $this->getPower() ? $this->getPower() : $this->_card->getPower();
 
         if ($damage)
         {
@@ -38,8 +39,10 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Action
 
                 if ($health < 0 && $this->_card->getBreakthrough())
                 {
-                    $this->_breakthrough = abs(
-                        $health
+                    $this->setBreakthrough(
+                        abs(
+                            $health
+                        )
                     );
                 }
 
@@ -62,10 +65,9 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Action
 
     public function player(
         \OpenLegends\Engine\Abstract\Player &$player,
-        ?int $power = null
     ): void
     {
-        $damage = $power ? $power : $this->_card->getPower();
+        $damage = $this->getPower() ? $this->getPower() : $this->_card->getPower();
 
         if ($damage)
         {
@@ -85,8 +87,23 @@ class Attack extends \OpenLegends\Engine\Abstract\Card\Action
         }
     }
 
+    public function getPower(): int
+    {
+        return $this->_power;
+    }
+
+    public function setPower(int $value): void
+    {
+        $this->_power = $value;
+    }
+
     public function getBreakthrough(): int
     {
         return $this->_breakthrough;
+    }
+
+    public function setBreakthrough(int $value): void
+    {
+        $this->_breakthrough = $value;
     }
 }
