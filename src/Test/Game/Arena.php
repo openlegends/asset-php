@@ -12,15 +12,15 @@ class Arena extends \OpenLegends\Engine\Abstract\Game
 
         for ($i = 0; $i < 3; $i++) // generate 3 copies of each card
         {
-            $deck->add(
+            $deck->addCard(
                 new \OpenLegends\Asset\Test\Card\Goblin()
             );
 
-            $deck->add(
+            $deck->addCard(
                 new \OpenLegends\Asset\Test\Card\Mouse()
             );
 
-            $deck->add(
+            $deck->addCard(
                 new \OpenLegends\Asset\Test\Card\Rat()
             );
         }
