@@ -36,6 +36,38 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
             1
         );
 
+        $this->setBreakthrough(
+            false
+        );
+
+        $this->setCover(
+            false
+        );
+
+        $this->setDrain(
+            false
+        );
+
+        $this->setGuard(
+            false
+        );
+
+        $this->setLethal(
+            false
+        );
+
+        $this->setPilfer(
+            false
+        );
+
+        $this->setProphecy(
+            false
+        );
+
+        $this->setUnique(
+            false
+        );
+
         $this->setAttribute(
             new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
         );

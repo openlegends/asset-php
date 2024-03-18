@@ -36,6 +36,38 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
             3
         );
 
+        $this->setBreakthrough(
+            true
+        );
+
+        $this->setCover(
+            false
+        );
+
+        $this->setDrain(
+            true
+        );
+
+        $this->setGuard(
+            true
+        );
+
+        $this->setLethal(
+            true
+        );
+
+        $this->setPilfer(
+            false
+        );
+
+        $this->setProphecy(
+            false
+        );
+
+        $this->setUnique(
+            false
+        );
+
         $this->setAttribute(
             new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
         );
