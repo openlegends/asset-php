@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenLegends\Asset\Test\Action\Card;
+namespace OpenLegends\Asset\Test\Card\Ability;
 
-class Damage extends \OpenLegends\Engine\Abstract\Action\Card
+class Damage extends \OpenLegends\Engine\Abstract\Card\Ability
 {
     public function __construct()
     {
