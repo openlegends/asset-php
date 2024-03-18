@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Card\Action;
 
-class Attack extends \OpenLegends\Engine\Abstract\Card\Action
+class Damage extends \OpenLegends\Engine\Abstract\Card\Action
 {
     private \OpenLegends\Engine\Abstract\Card $_card;
 
