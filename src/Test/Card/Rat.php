@@ -24,7 +24,7 @@ class Rat extends \OpenLegends\Engine\Abstract\Card
             new \OpenLegends\Asset\Test\Card\Ability\Damage()
         );
 
-        $this->setTitle(
+        $this->setName(
             _('Rat')
         );
 

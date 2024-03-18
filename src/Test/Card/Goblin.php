@@ -8,7 +8,7 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
-        $this->setTitle(
+        $this->setName(
             _('Goblin')
         );
 
