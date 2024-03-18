@@ -8,22 +8,6 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
-        $this->setAttribute(
-            new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
-        );
-
-        $this->setType(
-            new \OpenLegends\Asset\Test\Card\Type\Animal()
-        );
-
-        $this->setRarity(
-            new \OpenLegends\Asset\Test\Card\Rarity\Common()
-        );
-
-        $this->setAbility(
-            new \OpenLegends\Asset\Test\Card\Ability\Damage()
-        );
-
         $this->setTitle(
             _('Mouse')
         );
@@ -50,6 +34,22 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
 
         $this->setExtract(
             1
+        );
+
+        $this->setAttribute(
+            new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
+        );
+
+        $this->setType(
+            new \OpenLegends\Asset\Test\Card\Type\Animal()
+        );
+
+        $this->setRarity(
+            new \OpenLegends\Asset\Test\Card\Rarity\Common()
+        );
+
+        $this->setAbility(
+            new \OpenLegends\Asset\Test\Card\Ability\Damage()
         );
     }
 }

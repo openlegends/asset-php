@@ -8,36 +8,6 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 {
     public function __construct()
     {
-        $ability = new \OpenLegends\Asset\Test\Card\Ability\Multiple();
-
-        $ability->add(
-            new \OpenLegends\Asset\Test\Card\Ability\Lethal()
-        );
-
-        $ability->add(
-            new \OpenLegends\Asset\Test\Card\Ability\Guard()
-        );
-
-        $ability->add(
-            new \OpenLegends\Asset\Test\Card\Ability\Damage()
-        );
-
-        $this->setAbility(
-            $ability
-        );
-
-        $this->setAttribute(
-            new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
-        );
-
-        $this->setType(
-            new \OpenLegends\Asset\Test\Card\Type\Goblin()
-        );
-
-        $this->setRarity(
-            new \OpenLegends\Asset\Test\Card\Rarity\Common()
-        );
-
         $this->setTitle(
             _('Goblin')
         );
@@ -64,6 +34,32 @@ class Goblin extends \OpenLegends\Engine\Abstract\Card
 
         $this->setExtract(
             3
+        );
+
+        $this->setAttribute(
+            new \OpenLegends\Asset\Test\Card\Attribute\Neutral()
+        );
+
+        $this->setType(
+            new \OpenLegends\Asset\Test\Card\Type\Goblin()
+        );
+
+        $this->setRarity(
+            new \OpenLegends\Asset\Test\Card\Rarity\Common()
+        );
+
+        $ability = new \OpenLegends\Asset\Test\Card\Ability\Multiple();
+
+        $ability->add(
+            new \OpenLegends\Asset\Test\Card\Ability\Damage()
+        );
+
+        $ability->add(
+            new \OpenLegends\Asset\Test\Card\Ability\Drain()
+        );
+
+        $this->setAbility(
+            $ability
         );
     }
 }
