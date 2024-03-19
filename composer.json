@@ -13,5 +13,7 @@
             "name": "OpenLegends"
         }
     ],
-    "require": {}
+    "require": {
+        "openlegends/core": "dev-main"
+    }
 }
