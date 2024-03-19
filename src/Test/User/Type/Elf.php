@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OpenLegends\Asset\Test\Player;
+namespace OpenLegends\Asset\Test\User\Type;
 
-class Elf extends \OpenLegends\Engine\Abstract\Player
+class Elf extends \OpenLegends\Engine\Abstract\User\Type
 {
     public function __construct()
     {
@@ -14,14 +14,6 @@ class Elf extends \OpenLegends\Engine\Abstract\Player
 
         $this->setDescription(
             _('Just Elf')
-        );
-
-        $this->setHealth(
-            30
-        );
-
-        $this->setRunes(
-            5
         );
     }
 }
