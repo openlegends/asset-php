@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Card;
 
-class Goblin extends \OpenLegends\Engine\Abstract\Card
+class Goblin extends \OpenLegends\Core\Abstract\Card
 {
     public function __construct()
     {

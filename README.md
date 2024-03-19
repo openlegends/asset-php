@@ -1,3 +1,3 @@
 # Game Assets for Open Legends
 
-Game schemes, items and behavior implementation based on the [engine-php](https://github.com/openlegends/engine-php) interface.
+Game schemes, items and behavior implementation based on the [core-php](https://github.com/openlegends/core-php) interface.

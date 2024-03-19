@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Card\Action;
 
-class Heal extends \OpenLegends\Engine\Abstract\Card\Action
+class Heal extends \OpenLegends\Core\Abstract\Card\Action
 {
-    private \OpenLegends\Engine\Abstract\Card $_card;
+    private \OpenLegends\Core\Abstract\Card $_card;
 
     private int $_power = 0;
 
     public function __construct(
-        \OpenLegends\Engine\Abstract\Card $card
+        \OpenLegends\Core\Abstract\Card $card
     ) {
         $this->_card = $card;
     }
 
     public function card(
-        \OpenLegends\Engine\Abstract\Card &$card
+        \OpenLegends\Core\Abstract\Card &$card
     ): void
     {
         $card->setHealth(
@@ -26,7 +26,7 @@ class Heal extends \OpenLegends\Engine\Abstract\Card\Action
     }
 
     public function player(
-        \OpenLegends\Engine\Abstract\Player &$player
+        \OpenLegends\Core\Abstract\Player &$player
     ): void
     {
         $player->setHealth(

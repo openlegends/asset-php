@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Card\Action;
 
-class Damage extends \OpenLegends\Engine\Abstract\Card\Action
+class Damage extends \OpenLegends\Core\Abstract\Card\Action
 {
-    private \OpenLegends\Engine\Abstract\Card $_card;
+    private \OpenLegends\Core\Abstract\Card $_card;
 
     private int $_power = 0;
 
     private int $_breakthrough = 0;
 
     public function __construct(
-        \OpenLegends\Engine\Abstract\Card $card
+        \OpenLegends\Core\Abstract\Card $card
     ) {
         $this->_card = $card;
     }
 
     public function card(
-        \OpenLegends\Engine\Abstract\Card &$card,
+        \OpenLegends\Core\Abstract\Card &$card,
     ): void
     {
         $damage = $this->getPower() ? $this->getPower() : $this->_card->getPower();
@@ -64,7 +64,7 @@ class Damage extends \OpenLegends\Engine\Abstract\Card\Action
     }
 
     public function player(
-        \OpenLegends\Engine\Abstract\Player &$player,
+        \OpenLegends\Core\Abstract\Player &$player,
     ): void
     {
         $damage = $this->getPower() ? $this->getPower() : $this->_card->getPower();

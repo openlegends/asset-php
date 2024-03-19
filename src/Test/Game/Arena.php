@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Game;
 
-class Arena extends \OpenLegends\Engine\Abstract\Game
+class Arena extends \OpenLegends\Core\Abstract\Game
 {
     public function __construct()
     {

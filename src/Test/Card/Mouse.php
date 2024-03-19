@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Card;
 
-class Mouse extends \OpenLegends\Engine\Abstract\Card
+class Mouse extends \OpenLegends\Core\Abstract\Card
 {
     public function __construct()
     {
@@ -84,4 +84,50 @@ class Mouse extends \OpenLegends\Engine\Abstract\Card
             new \OpenLegends\Asset\Test\Card\Ability\Damage()
         );
     }
+
+    public function onCard(
+        \OpenLegends\Core\Abstract\Card $card
+    )
+    {
+        $damage = new \OpenLegends\Asset\Test\Card\Action\Damage(
+            $mouse
+        );
+
+        $damage->card(
+            $card
+        );
+
+        if ($damage->getBreakthrough())
+        {
+            $damage = new \OpenLegends\Asset\Test\Card\Action\Damage(
+                $mouse
+            );
+
+            $damage->setPower(
+                $damage->getBreakthrough()
+            );
+
+            $damage->player(
+                $player
+            );
+        }
+    }
+
+    public function onPlayer(
+        \OpenLegends\Core\Abstract\Player $player
+    )
+    {
+        $damage = new \OpenLegends\Asset\Test\Card\Action\Damage(
+            $mouse
+        );
+
+        $damage->player(
+            $player
+        );
+    }
+
+    public function onDiscard(
+        $card
+    )
+    {}
 }

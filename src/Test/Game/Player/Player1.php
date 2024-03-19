@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OpenLegends\Asset\Test\Game\Player;
 
-class Player1 extends \OpenLegends\Engine\Abstract\Game\Player
+class Player1 extends \OpenLegends\Core\Abstract\Game\Player
 {
     public function __construct()
     {
